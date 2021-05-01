@@ -1,16 +1,18 @@
-import { configureStore, combineReducers } from '@reduxjs/toolkit'
-import userReducer, { InitialState as UserState } from './manager/user/userSlice'
+import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import userReducer, {
+  InitialState as UserState,
+} from "./manager/user/userSlice";
 
 export interface RootState {
-    user: UserState
+  user: UserState;
 }
 
 const rootReducer = combineReducers({
-    user: userReducer
-})
+  user: userReducer,
+});
 
 const store = configureStore({
-    reducer: rootReducer
-})
+  reducer: rootReducer,
+});
 
-export default store
+export default store;
